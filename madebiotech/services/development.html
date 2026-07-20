@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr" vocab="http://schema.org/">
     <head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/images/madebiotech.png">
@@ -607,7 +614,18 @@ window.cookieconsent.initialise({
 				var addy44167bad1eb91ad2754f6dc027b6dd4d = 'g&#101;r&#97;l' + '&#64;';
 				addy44167bad1eb91ad2754f6dc027b6dd4d = addy44167bad1eb91ad2754f6dc027b6dd4d + 'm&#97;d&#101;b&#105;&#111;t&#101;ch' + '&#46;' + 'c&#111;m';
 				document.getElementById('cloak44167bad1eb91ad2754f6dc027b6dd4d').innerHTML += addy44167bad1eb91ad2754f6dc027b6dd4d;
-		</script><br />Telephone: +351 291 639 800<br />http://www.madebiotech.com</p></div>
+		
+    // Theme Toggle logic
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+    }
+</script><br />Telephone: +351 291 639 800<br />http://www.madebiotech.com</p></div>
             
         
     

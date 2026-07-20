@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-gb" dir="ltr" vocab="https://schema.org/">
     <head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="/images/96.png">
@@ -556,7 +563,18 @@ GOOGLE_MAPS_API_KEY = "";
             
             
                 
-                    <div class="uk-panel uk-text-small uk-text-emphasis uk-margin uk-text-center"><p>©<script>document.write(new Date().getFullYear())</script> NatureXtracts. All rights reserved.</p></div>
+                    <div class="uk-panel uk-text-small uk-text-emphasis uk-margin uk-text-center"><p>©<script>document.write(new Date().getFullYear())
+    // Theme Toggle logic
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+    }
+</script> NatureXtracts. All rights reserved.</p></div>
                 
             
         

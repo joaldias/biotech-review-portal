@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-gb">
 <head>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+
       
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="author" content="Patrícia Pestana" />
@@ -341,7 +348,18 @@ window.cookieconsent.initialise({
  var addy_text93245 = '<img alt="" src="images/order.jpg" style="width: 194px; height: 38px;" />';
  document.getElementById('cloak93245').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy93245 + '\'>'+addy_text93245+'<\/a>';
  //-->
- </script></p>
+ 
+    // Theme Toggle logic
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      });
+    }
+</script></p>
 <div id="ckimgrsz" style="left: 250px; top: 126px;">
 	<div class="preview">
 		&nbsp;</div>
