@@ -3,24 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MadeBiotech Sustainable Biorefinery">
-  <title>MadeBiotech - Home</title>
+  <meta name="description" content="MadeBiotech Sustainable Biorefinery - Biomass Valorization & Industrial Biotechnology">
+  <title>MadeBiotech - Sustainable Biorefinery</title>
   <link href="templates/yootheme/cache/custom_improvements.css" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="nav-container">
-      <a href="index.html" class="logo">Made<span>Biotech</span></a>
+      <a href="index.html" class="logo-wrapper">
+        <img src="images/madebiotech.png" alt="MadeBiotech Logo" class="logo-img">
+        <span class="logo-text">made<span>biotech</span></span>
+      </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="company.html">Company</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="news.html">News</a></li>
-                <li><a href="pt/index.html">PT</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="hamburger">
+      <button class="hamburger" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -30,91 +32,165 @@
 
   <main>
     <section class="hero">
+      <!-- High-End SVGs for molecular graphics floating background -->
+      <svg class="floating-molecule left-bottom" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="12" fill="#10b981" fill-opacity="0.6"/>
+        <circle cx="70" cy="70" r="14" fill="#34d399" fill-opacity="0.8"/>
+        <circle cx="75" cy="25" r="8" fill="#059669" fill-opacity="0.5"/>
+        <line x1="30" y1="30" x2="70" y2="70" stroke="#10b981" stroke-width="3" stroke-dasharray="4 4"/>
+        <line x1="70" y1="70" x2="75" y2="25" stroke="#10b981" stroke-width="2"/>
+      </svg>
+      <svg class="floating-molecule right-top" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="80" r="16" fill="#34d399" fill-opacity="0.7"/>
+        <circle cx="80" cy="40" r="12" fill="#10b981" fill-opacity="0.5"/>
+        <circle cx="20" cy="30" r="10" fill="#059669" fill-opacity="0.6"/>
+        <line x1="40" y1="80" x2="80" y2="40" stroke="#34d399" stroke-width="3"/>
+        <line x1="40" y1="80" x2="20" y2="30" stroke="#34d399" stroke-width="2" stroke-dasharray="3 3"/>
+      </svg>
+
       <div class="hero-grid">
-        <div class="hero-text">
+        <div class="hero-text reveal">
           <h1>Sustainable <span>Biorefinery</span> & Biomass Valorization</h1>
-          <p>We develop industrial biotechnology processes that replace oil-derivatives and synthetic products with high-quality, economically viable natural alternatives.</p>
+          <p>Replacing oil-derivatives and synthetic products with high-quality, economically viable natural alternatives. We develop custom industrial biotechnology processes designed for a greener tomorrow.</p>
           <div class="btn-group">
-            <a href="services.html" class="btn btn-primary">Explore Our Services</a>
-            <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            <a href="services.html" class="btn btn-primary">Explore Services &rarr;</a>
+            <a href="contact.html" class="btn btn-outline">Request Consultation</a>
           </div>
         </div>
-        <div class="hero-image">
-          <img src="images/hero_wide.jpg" alt="Hero" loading="lazy">
+        <div class="hero-image-wrapper reveal">
+          <div class="hero-image-container">
+            <img src="images/hero_wide.jpg" alt="MadeBiotech Biorefinery Laboratory Facility">
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="trust-bar">
+    <div class="trust-bar reveal">
       <div class="trust-item">
-        <span class="value">> 2 M€</span>
-        <span class="label">Invested in R&D</span>
+        <span class="value" data-target="2">&gt; 2 M€</span>
+        <span class="label">R&D Investments</span>
       </div>
       <div class="trust-item">
-        <span class="value">60 L</span>
-        <span class="label">Max Bioreactor Scale</span>
+        <span class="value" data-target="60">60 L</span>
+        <span class="label">Max Bioreactor scale</span>
       </div>
       <div class="trust-item">
         <span class="value">2011</span>
-        <span class="label">Year Founded</span>
+        <span class="label">Founded</span>
       </div>
       <div class="trust-item">
         <span class="value">Madeira</span>
-        <span class="label">Island HQ</span>
+        <span class="label">Island Location</span>
       </div>
     </div>
 
     <section class="section">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2>State-of-the-Art <span>Technology</span></h2>
+        <p>Harnessing nature's potential through green chemistry, bioreactors, and precision extraction operations.</p>
       </div>
       <div class="grid-3">
-        <div class="card">
-          <img src="images/pdf_images/page_6_img_1.jpeg" alt="Extraction Operations" loading="lazy">
+        <div class="card reveal">
+          <div class="card-img-wrapper">
+            <img src="images/pdf_images/page_6_img_1.jpeg" alt="Supercritical Fluid Technology & sCO2 operations">
+          </div>
           <h3>Extraction Operations</h3>
-          <p>Supercritical Fluid Technology (sCO2), hydro and steam distillation, and selective solvent extraction for process characterization.</p>
+          <p>Supercritical Fluid Technology (sCO2), hydro and steam distillation, and selective solvent extraction for process optimization and characterization.</p>
         </div>
-        <div class="card">
-          <img src="images/pdf_images/page_6_img_2.jpeg" alt="Material Formulation" loading="lazy">
+        <div class="card reveal">
+          <div class="card-img-wrapper">
+            <img src="images/pdf_images/page_6_img_2.jpeg" alt="Material formulation & preparation">
+          </div>
           <h3>Material Formulation</h3>
-          <p>Freeze drying, vacuum packaging, and specialized cryo-milling for raw material preparation and product formulation.</p>
+          <p>Freeze drying, vacuum packaging, and specialized cryo-milling for raw material preparation, ensuring long-term bio-ingredient stability.</p>
         </div>
-        <div class="card">
-          <img src="images/pdf_images/page_7_img_1.jpeg" alt="Fermentation & Scale-Up" loading="lazy">
+        <div class="card reveal">
+          <div class="card-img-wrapper">
+            <img src="images/pdf_images/page_7_img_1.jpeg" alt="Bioreactor scale up & fermentation">
+          </div>
           <h3>Fermentation & Scale-Up</h3>
-          <p>Aerobic and anaerobic fermentations scaling from bench to 60 L bioreactors, backed by a full analytical laboratory.</p>
+          <p>Aerobic and anaerobic fermentations scaling from bench-top systems to 60 L bioreactors, backed by a comprehensive analytical laboratory.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <div class="footer-container">
       <div class="footer-col">
-        <h3>Links</h3>
+        <div class="logo-wrapper" style="margin-bottom: 1rem;">
+          <img src="images/madebiotech.png" alt="MadeBiotech Logo" class="logo-img" style="height: 36px;">
+          <span class="logo-text" style="font-size: 1.2rem;">made<span>biotech</span></span>
+        </div>
+        <p>Developing sustainable biotechnology solutions and biorefinery processes to power the global transition to a circular bio-based economy.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="company.html">Company</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="news.html">News</a></li>
-                <li><a href="pt/index.html">PT</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <p>Madeira Island, Portugal<br>
+        Email: <a href="mailto:geral@madebiotech.com" style="color: var(--primary-light);">geral@madebiotech.com</a></p>
+      </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 MadeBiotech CR & D, S.A. All rights reserved.</span>
-      <span>geral@madebiotech.com</span>
+      <span>&copy; 2026 MadeBiotech CR & D, S.A. All rights reserved.</span>
+      <span>ISO 9001 Certified Laboratory</span>
     </div>
   </footer>
 
   <script>
-    const btn = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav-links');
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('open');
-      nav.classList.toggle('open');
+    // Mobile navigation toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    // Scroll reveal animation implementation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < triggerBottom) {
+          el.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Header scroll background behavior
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Interactive glass card light effect
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+      });
     });
   </script>
 </body>

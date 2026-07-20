@@ -10,14 +10,15 @@
 <body>
     <header>
       <div class="nav-container">
-        <a href="index.html" class="logo">Nature<span>Xtracts</span></a>
+        <a href="index.html" class="logo">
+          <img src="logo_naturextracts.jpg" alt="NatureXtracts Logo">
+        </a>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="technology.html">Technology</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
           <li><a href="company.html">Company</a></li>
-                <li><a href="pt/index.html">PT</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <button class="hamburger" aria-label="Toggle Navigation">
@@ -28,66 +29,114 @@
       </div>
     </header>
 
-    <section class="page-hero">
-        <div class="page-hero-inner">
-            <div class="breadcrumb">Home &gt; Products</div>
-            <h1>Natural <span>Products</span></h1>
-            <p>A portfolio of premium natural extracts, essential oils, and hydrolats produced using our state-of-the-art bioprocessing facilities.</p>
+    <section class="page-hero reveal">
+        <div class="page-hero-inner reveal">
+            <div class="breadcrumb">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <span class="current">Products</span>
+            </div>
+            <h1>Natural <span>Extracts</span> & Products</h1>
+            <p>Explore our standard portfolio of botanical extracts, pure essential oils, hydrolats, and custom-formulated dietary supplements.</p>
         </div>
     </section>
 
-    <section class="section">
+    <!-- NX Immunity Section -->
+    <section class="section reveal">
+        <div class="section-header">
+            <h2>NX <span>Immunity Essentials</span></h2>
+            <p>Our premier, scientifically substantiated dietary supplement formula for strong immune system support. Based on Balchem's VitaCholine™ and Albion™ Minerals.</p>
+        </div>
+        
+        <div class="split reveal">
+            <div class="split-text">
+                <h3>The Essential Immune Support</h3>
+                <p>Nutrients in this formula are all essential nutrients with specifically selected functions to give maximum support to the immune system.</p>
+                <p>This formulation creates a completely unique combination of immune supporting essential nutrients which, with the inclusion of Choline, has not been combined before.</p>
+                <p>With clinical evidence showing that up to 90% of the population is deficient in Choline, NX Immunity Essentials addresses a critical nutritional gap.</p>
+                <ul class="check-list">
+                    <li><strong>Choline:</strong> Critical role in macrophage cell membrane synthesis & signaling.</li>
+                    <li><strong>Vitamin C:</strong> Contributes to normal immune defense and cell protection.</li>
+                    <li><strong>Vitamin D3:</strong> Contributes to the regulation of immune & inflammatory response.</li>
+                    <li><strong>Vitamin E:</strong> Antiviral and bactericidal membrane protector against free radicals.</li>
+                    <li><strong>Zinc & Selenium:</strong> Supports antibody production and normal T-cell precursors.</li>
+                </ul>
+            </div>
+            <div class="split-img">
+                <img src="images/pdf_images/page_2_img_1.jpeg" alt="NX Immunity Essentials Product" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Oils & Hydrolats Portfolio -->
+    <section class="section" style="background: rgba(6, 18, 14, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="section-header">
+            <h2>Botanical <span>Extracts</span> & Oils</h2>
+            <p>100% pure, natural, and free from heavy metals or pesticides. Developed in accordance with European Pharmacopoeia standards.</p>
+        </div>
+        
         <div class="grid-3">
-            <div class="card">
-                <h3>Essential Oils</h3>
-                <p>Steam-distilled aromatic oils from oregano, lavender, eucalyptus, rosemary, fennel, and more — produced with controlled temperature for maximum purity.</p>
+            <div class="card reveal">
+                <h3>Lavender Essential Oil</h3>
+                <p><strong>Botanical Name:</strong> Lavandula angustifolia</p>
+                <p><strong>Part:</strong> Flowers | <strong>Origin:</strong> Bulgaria</p>
+                <p><strong>Chemical Profile:</strong> Linalool, linalyl acetate, terpinene-4-ol.</p>
             </div>
-            <div class="card">
-                <h3>CO2 Extracts</h3>
-                <p>Supercritical CO2-extracted concentrates from algae, botanicals, and marine biomass — sterile, solvent-free, and preservation-free.</p>
+            <div class="card reveal">
+                <h3>Rosemary Essential Oil</h3>
+                <p><strong>Botanical Name:</strong> Rosmarinus officinalis</p>
+                <p><strong>Part:</strong> Leaves | <strong>Origin:</strong> Portugal</p>
+                <p><strong>Chemical Profile:</strong> a-pinene, 1,8-cineole, camphor, camphene.</p>
             </div>
-            <div class="card">
-                <h3>Hydrolats (Floral Waters)</h3>
-                <p>Pure aromatic waters co-produced during steam distillation — fennel, lemon, rosemary, eucalyptus, orange, and oregano hydrolats available.</p>
+            <div class="card reveal">
+                <h3>Eucalyptus Essential Oil</h3>
+                <p><strong>Botanical Name:</strong> Eucalyptus globulus</p>
+                <p><strong>Part:</strong> Leaves & Twigs | <strong>Origin:</strong> Portugal</p>
+                <p><strong>Chemical Profile:</strong> 1,8-cineole, a-pinene, limonene.</p>
             </div>
-            <div class="card">
-                <h3>Freeze-Dried Powders</h3>
-                <p>Lyophilized botanical and biological extracts preserving sensitive bioactive compounds in stable, high-shelf-life powder form.</p>
+            <div class="card reveal">
+                <h3>CO₂ Botanical Extracts</h3>
+                <p>Supercritical CO₂ extracts from marine microalgae, rosemary, and selected botanicals. Rich in lipid-soluble active fractions.</p>
             </div>
-            <div class="card">
-                <h3>Algae Extracts</h3>
-                <p>Bioactive compounds from freshwater and marine microalgae — standardized for nutraceutical, cosmetic, and food ingredient applications.</p>
+            <div class="card reveal">
+                <h3>Pure Hydrolats</h3>
+                <p>Aromatic waters collected during steam distillation. Standard options include fennel, lemon, rosemary, eucalyptus, and oregano.</p>
             </div>
-            <div class="card">
+            <div class="card reveal">
                 <h3>Custom Formulations</h3>
-                <p>Bespoke extracts formulated to your exact specifications — from raw material to finished ingredient, under full confidentiality.</p>
+                <p>We work directly with your research teams to refine raw biomass and create customized target powders and liquid matrices.</p>
             </div>
         </div>
-    </section>
-
-    <section class="section" style="text-align: center;">
-        <a href="contact.html" class="btn btn-outline">Request a Custom Product</a>
     </section>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
+          <h4>NatureXtracts</h4>
+          <p>Differentiated contract manufacturing partner developing sustainable processes with low environmental impact and high technological value.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="technology.html">Technology</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="company.html">Company</a></li>
-                <li><a href="pt/index.html">PT</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Headquarters</h4>
+          <p>Zona Franca Industrial Plataforma 28,<br>
+             Pav. Industrial K, Módulo 2<br>
+             9200-047 Caniçal, Madeira Island, Portugal</p>
+          <p>Email: geral@naturextracts.com</p>
+        </div>
       </div>
       <div class="footer-bottom">
-        <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
-            <span>© 2026 NatureXtracts — Custom Manufacturing. All rights reserved.</span>
-            <span>geral@naturextracts.com</span>
-        </div>
+        <span>© 2026 NatureXtracts, S.A. All rights reserved.</span>
+        <span>Green Chemistry Biorefinery</span>
       </div>
     </footer>
 

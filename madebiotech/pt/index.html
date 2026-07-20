@@ -10,7 +10,10 @@
 <body>
   <header>
     <div class="nav-container">
-      <a href="index.html" class="logo">Made<span>Biotech</span></a>
+      <a href="index.html" class="logo-wrapper">
+        <img src="../images/madebiotech.png" alt="MadeBiotech Logo" class="logo-img">
+        <span class="logo-text">made<span>biotech</span></span>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Início</a></li>
         <li><a href="empresa.html">Empresa</a></li>
@@ -20,7 +23,7 @@
         <li><a href="contacto.html">Contacto</a></li>
         <li><a href="../index.html">EN</a></li>
       </ul>
-      <button class="hamburger">
+      <button class="hamburger" aria-label="Toggle Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -64,22 +67,22 @@
       </div>
     </div>
 
-    <section class="section">
+    <section class="section reveal">
       <div class="section-header">
         <h2>Tecnologia de <span>Ponta</span></h2>
       </div>
       <div class="grid-3">
-        <div class="card">
+        <div class="card reveal">
           <img src="../images/pdf_images/page_6_img_1.jpeg" alt="Operações de Extração" loading="lazy">
           <h3>Operações de Extração</h3>
           <p>Tecnologia de Fluidos Supercríticos (sCO2), destilação a vapor e hidro, e extração seletiva por solventes para caracterização de processos.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <img src="../images/pdf_images/page_6_img_2.jpeg" alt="Formulação de Materiais" loading="lazy">
           <h3>Formulação de Materiais</h3>
           <p>Liofilização, embalamento a vácuo, e criomoagem especializada para preparação de matéria-prima e formulação de produto final.</p>
         </div>
-        <div class="card">
+        <div class="card reveal">
           <img src="../images/pdf_images/page_7_img_1.jpeg" alt="Fermentação e Escala" loading="lazy">
           <h3>Fermentação e Escala</h3>
           <p>Fermentações aeróbias e anaeróbias em biorreatores até 60 Litros, apoiadas por laboratórios de análise equipados.</p>
@@ -109,11 +112,49 @@
   </footer>
 
   <script>
-    const btn = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav-links');
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('open');
-      nav.classList.toggle('open');
+    // Mobile navigation toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+
+    // Scroll reveal animation implementation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < triggerBottom) {
+          el.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // Header scroll background behavior
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Interactive glass card light effect
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--x', `${x}px`);
+        card.style.setProperty('--y', `${y}px`);
+      });
     });
   </script>
 </body>
