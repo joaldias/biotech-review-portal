@@ -130,34 +130,40 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      width: 100%;
     }
 
+    /* Solid clean background to make brand logos stand out beautifully */
     .logo-container {
-      height: 70px;
+      height: 80px;
       width: 100%;
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 12px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin-bottom: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover .logo-container {
+      transform: scale(1.02);
+    }
+
+    .mb:hover .logo-container {
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+    }
+
+    .nx:hover .logo-container {
+      box-shadow: 0 4px 20px rgba(132, 204, 22, 0.25);
     }
 
     .portal-logo {
       max-height: 100%;
-      max-width: 80%;
+      max-width: 90%;
       object-fit: contain;
-      transition: transform 0.3s ease;
-    }
-
-    /* Modern color inversion filter for dark theme compatibility */
-    .mb .portal-logo {
-      filter: invert(1) hue-rotate(180deg) brightness(1.2) drop-shadow(0 4px 12px rgba(16, 185, 129, 0.3));
-    }
-    .nx .portal-logo {
-      filter: invert(1) hue-rotate(180deg) brightness(1.2) drop-shadow(0 4px 12px rgba(132, 204, 22, 0.3));
-    }
-
-    .card:hover .portal-logo {
-      transform: scale(1.05);
     }
 
     .badge {
