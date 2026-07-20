@@ -126,6 +126,39 @@
 
     .card-top {
       margin-bottom: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo-container {
+      height: 70px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .portal-logo {
+      max-height: 100%;
+      max-width: 80%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    /* Soft blend/glow for logos if they have slight backgrounds */
+    .mb .portal-logo {
+      filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.2));
+    }
+    .nx .portal-logo {
+      filter: drop-shadow(0 4px 12px rgba(132, 204, 22, 0.2));
+      border-radius: 4px;
+    }
+
+    .card:hover .portal-logo {
+      transform: scale(1.05);
     }
 
     .badge {
@@ -245,6 +278,9 @@
       <!-- MadeBiotech Portal Card -->
       <div class="card mb">
         <div class="card-top">
+          <div class="logo-container">
+            <img src="madebiotech/images/madebiotech.png" alt="MadeBiotech Logo" class="portal-logo">
+          </div>
           <span class="badge">Biorefinery</span>
           <h2>Made<span>Biotech</span></h2>
           <p class="desc">Engineering industrial biotechnology processes and sustainable biomass fractionation.</p>
@@ -258,6 +294,9 @@
       <!-- NatureXtracts Portal Card -->
       <div class="card nx">
         <div class="card-top">
+          <div class="logo-container">
+            <img src="naturextracts/logo_naturextracts.jpg" alt="NatureXtracts Logo" class="portal-logo">
+          </div>
           <span class="badge">Supercritical fluid CO2</span>
           <h2>Nature<span>Xtracts</span></h2>
           <p class="desc">State-of-the-art green chemical extraction and custom bio-manufacturing operations.</p>
