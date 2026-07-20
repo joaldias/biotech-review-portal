@@ -470,7 +470,7 @@ header.scrolled {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 3rem 2rem;
-    background: rgba(12, 20, 10, 0.4);
+    background: var(--card-bg);
     backdrop-filter: blur(12px);
     border: 1px solid var(--border-color);
     border-radius: 20px;
