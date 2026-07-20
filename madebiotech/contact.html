@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MadeBiotech - Contact">
+  <title>MadeBiotech - Contact</title>
+  <link href="templates/yootheme/cache/custom_improvements.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Made<span>Biotech</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">Home > Contact</div>
+        <h1>Get in <span>Touch</span></h1>
+        <p>Interested in collaborating or requesting a quotation? Fill out the form below and we will get back to you within 2 business days.</p>
+      </div>
+    </section>
+
+    <section class="contact-section section">
+      <form action="#" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Your Company">
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <input type="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="+351 xxx xxx xxx">
+          </div>
+        </div>
+        <div class="form-group" style="width: 100%;">
+          <select style="width: 100%; padding: 0.5rem;">
+            <option>Contract Research</option>
+            <option>Technology Scale-Up</option>
+            <option>IP Valorization</option>
+            <option>Technical Consultancy</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group" style="width: 100%;">
+          <textarea placeholder="Tell us about your project or request..." style="width: 100%; min-height: 150px; padding: 0.5rem;"></textarea>
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+          <button type="submit" class="btn btn-primary">Send Message →</button>
+        </div>
+      </form>
+
+      <div class="card" style="margin-top: 3rem; text-align: center; max-width: 400px; margin-left: auto; margin-right: auto;">
+        <h3>Headquarters</h3>
+        <p>Madeira Island</p>
+        <p>Portugal</p>
+        <a href="mailto:geral@madebiotech.com">geral@madebiotech.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company.html">Company</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MadeBiotech CR & D, S.A. All rights reserved.</span>
+      <span>geral@madebiotech.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav-links');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
