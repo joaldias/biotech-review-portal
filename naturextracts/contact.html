@@ -19,8 +19,7 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="company.html">Company</a></li>
-                <li><a href="pt/index.html">PT</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <button class="hamburger" aria-label="Toggle Navigation">
           <span></span>
@@ -30,79 +29,91 @@
       </div>
     </header>
 
-    <section class="page-hero reveal">
-        <div class="page-hero-inner reveal">
-            <div class="breadcrumb">Home &gt; Contact</div>
-            <h1>Request a <span>Quote</span></h1>
-            <p>Tell us about your project and we will respond within 2 business days with a tailored proposal.</p>
+    <section class="page-hero">
+        <div class="page-hero-inner">
+            <div class="breadcrumb">
+              <a href="index.html">Home</a>
+              <span>/</span>
+              <span class="current">Contact</span>
+            </div>
+            <h1>Partner <span>With Us</span></h1>
+            <p>Get in touch with our team of process development engineers and specialists to discuss custom manufacturing or extraction requirements.</p>
         </div>
     </section>
 
-    <section class="section contact-section">
-        <form action="#" method="POST">
-            <div class="form-grid">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+    <section class="section">
+        <div class="split">
+            <div class="split-text">
+                <h3>Headquarters Address</h3>
+                <p style="font-size: 1.15rem; color: #fff; font-weight: 500; margin-bottom: 1rem;">NatureXtracts, S.A.</p>
+                <p style="line-height: 1.8;">
+                    Zona Franca Industrial Plataforma 28,<br>
+                    Pav. Industrial K, Módulo 2<br>
+                    9200-047 Caniçal<br>
+                    Madeira Island - Portugal
+                </p>
+                <div style="margin-top: 2rem;">
+                    <p><strong>P:</strong> +351 291 639 800</p>
+                    <p><strong>F:</strong> +351 291 750 251</p>
+                    <p><strong>E:</strong> <a href="mailto:geral@naturextracts.com" style="color: var(--primary); text-decoration: none;">geral@naturextracts.com</a></p>
+                    <p><strong>W:</strong> <a href="https://www.naturextracts.com" target="_blank" style="color: var(--primary); text-decoration: none;">www.naturextracts.com</a></p>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Your Company" required>
-                </div>
             </div>
-            <div class="form-grid">
-                <div class="form-group">
-                    <input type="email" placeholder="your@email.com" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" placeholder="+351 xxx xxx xxx">
-                </div>
-            </div>
-            <div class="form-group" style="width: 100%;">
-                <select required>
-                    <option value="" disabled selected>Service of interest</option>
-                    <option value="Supercritical CO2 Extraction">Supercritical CO2 Extraction</option>
-                    <option value="Steam / Hydro Distillation">Steam / Hydro Distillation</option>
-                    <option value="Lyophilization (Freeze Drying)">Lyophilization (Freeze Drying)</option>
-                    <option value="Bioreactor Fermentation">Bioreactor Fermentation</option>
-                    <option value="Analytical Testing (HPLC/GC)">Analytical Testing (HPLC/GC)</option>
-                    <option value="Custom Product Formulation">Custom Product Formulation</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group" style="width: 100%;">
-                <textarea placeholder="Describe your raw material, target product, and any regulatory or volume requirements..." rows="6" required></textarea>
-            </div>
-            <div style="text-align: center; margin-top: 1rem;">
-                <button type="submit" class="btn btn-primary">Send Request →</button>
-            </div>
-        </form>
 
-        <div class="card" style="margin-top: 3rem; text-align: center;">
-            <h3>Global Headquarters</h3>
-            <p>NatureXtracts SA</p>
-            <p>Madeira Island, Portugal</p>
-            <p>geral@naturextracts.com</p>
+            <div class="contact-section">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required placeholder="Custom Extraction Inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" required placeholder="Tell us about your raw materials and processing targets..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
+          <h4>NatureXtracts</h4>
+          <p>Differentiated contract manufacturing partner developing sustainable processes with low environmental impact and high technological value.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="technology.html">Technology</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="company.html">Company</a></li>
-                <li><a href="pt/index.html">PT</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Headquarters</h4>
+          <p>Zona Franca Industrial Plataforma 28,<br>
+             Pav. Industrial K, Módulo 2<br>
+             9200-047 Caniçal, Madeira Island, Portugal</p>
+          <p>Email: geral@naturextracts.com</p>
+        </div>
       </div>
       <div class="footer-bottom">
-        <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
-            <span>© 2026 NatureXtracts — Custom Manufacturing. All rights reserved.</span>
-            <span>geral@naturextracts.com</span>
-        </div>
+        <span>© 2026 NatureXtracts, S.A. All rights reserved.</span>
+        <span>Green Chemistry Biorefinery</span>
       </div>
     </footer>
 
