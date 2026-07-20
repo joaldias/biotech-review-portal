@@ -1,241 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="MadeBiotech and NatureXtracts portal - comparing old and revamped high-tech versions.">
-    <title>Biotech Sites Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <style>
-        :root {
-            --mb-color: #10b981;
-            --mb-glow: rgba(16, 185, 129, 0.4);
-            --nx-color: #84cc16;
-            --nx-glow: rgba(132, 204, 22, 0.4);
-            --bg-dark: #0a0d0c;
-            --card-bg: rgba(20, 26, 24, 0.6);
-            --border-color: rgba(255, 255, 255, 0.08);
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MadeBiotech & NatureXtracts portal - Comparing archive and revamped versions.">
+  <title>Biotechnology Portals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #030705;
+      --card-bg: rgba(7, 15, 11, 0.4);
+      --border: rgba(16, 185, 129, 0.1);
+      --text: #f3f4f6;
+      --text-muted: #8e9a93;
+      --mb: #10b981;
+      --nx: #84cc16;
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Outfit', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-            background: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.08), transparent 40%),
-                        radial-gradient(circle at 90% 80%, rgba(132, 204, 22, 0.08), transparent 40%);
-            padding: 4rem 2rem;
-        }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      padding: 2rem;
+      position: relative;
+    }
 
-        .container {
-            max-width: 1100px;
-            width: 100%;
-            text-align: center;
-        }
+    /* Ambient background elements */
+    body::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.04) 0%, transparent 70%);
+      top: 15%;
+      left: 10%;
+      pointer-events: none;
+    }
 
-        header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-            letter-spacing: -0.03em;
-            background: linear-gradient(to right, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    body::after {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(132, 204, 22, 0.03) 0%, transparent 70%);
+      bottom: 15%;
+      right: 10%;
+      pointer-events: none;
+    }
 
-        header p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 4rem;
-        }
+    .container {
+      max-width: 960px;
+      width: 100%;
+      z-index: 10;
+    }
 
-        .portal-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
 
-        .portal-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            padding: 3rem 2.5rem;
-            backdrop-filter: blur(16px);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    header h1 {
+      font-family: var(--font-title);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #ffffff, #8e9a93);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        .portal-card.mb-card {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(16, 185, 129, 0.05);
-        }
-        .portal-card.nx-card {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(132, 204, 22, 0.05);
-        }
+    header p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
 
-        .portal-card:hover {
-            transform: translateY(-8px);
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
 
-        .portal-card.mb-card:hover {
-            border-color: var(--mb-color);
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
-        }
-        .portal-card.nx-card:hover {
-            border-color: var(--nx-color);
-            box-shadow: 0 20px 40px rgba(132, 204, 22, 0.15);
-        }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
 
-        .logo-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
+    .card.mb:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.05);
+    }
 
-        .mb-card h2 span {
-            color: var(--mb-color);
-            text-shadow: 0 0 10px var(--mb-glow);
-        }
-        .nx-card h2 span {
-            color: var(--nx-color);
-            text-shadow: 0 0 10px var(--nx-glow);
-        }
+    .card.nx:hover {
+      border-color: rgba(132, 204, 22, 0.3);
+      box-shadow: 0 20px 40px rgba(132, 204, 22, 0.05);
+    }
 
-        .desc {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 3rem;
-            max-width: 380px;
-        }
+    .card-top {
+      margin-bottom: 2.5rem;
+    }
 
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            width: 100%;
-            max-width: 280px;
-        }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+    }
 
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 1rem;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: var(--transition);
-            text-align: center;
-        }
+    .mb .badge {
+      color: var(--mb);
+    }
 
-        .mb-btn-new {
-            background: var(--mb-color);
-            color: #ffffff;
-            box-shadow: 0 4px 14px var(--mb-glow);
-        }
-        .mb-btn-new:hover {
-            background: #059669;
-            box-shadow: 0 6px 20px var(--mb-glow);
-            transform: translateY(-2px);
-        }
+    .nx .badge {
+      color: var(--nx);
+    }
 
-        .nx-btn-new {
-            background: var(--nx-color);
-            color: #ffffff;
-            box-shadow: 0 4px 14px var(--nx-glow);
-        }
-        .nx-btn-new:hover {
-            background: #65a30d;
-            box-shadow: 0 6px 20px var(--nx-glow);
-            transform: translateY(-2px);
-        }
+    h2 {
+      font-family: var(--font-title);
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
 
-        .btn-old {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-        }
-        .btn-old:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
-        }
+    h2 span {
+      font-weight: 400;
+      opacity: 0.8;
+    }
 
-        footer {
-            margin-top: 5rem;
-            color: rgba(255, 255, 255, 0.25);
-            font-size: 0.85rem;
-        }
+    p.desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
 
-        @media (max-width: 768px) {
-            .portal-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            header h1 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 0.85rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .mb .btn-new {
+      background: var(--mb);
+      color: #030705;
+    }
+
+    .mb .btn-new:hover {
+      background: #34d399;
+      transform: translateY(-2px);
+    }
+
+    .nx .btn-new {
+      background: var(--nx);
+      color: #030705;
+    }
+
+    .nx .btn-new:hover {
+      background: #a3e635;
+      transform: translateY(-2px);
+    }
+
+    .btn-old {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-muted);
+    }
+
+    .btn-old:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      body {
+        padding: 3rem 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Biotechnology Review Portal</h1>
-            <p>Select a site version below to review design updates and presentation content</p>
-        </header>
+  <div class="container">
+    <header>
+      <h1>Biotech Review Portal</h1>
+      <p>Compare original archive snapshots and revamped versions</p>
+    </header>
 
-        <main class="portal-grid">
-            <!-- Madebiotech Card -->
-            <div class="portal-card mb-card">
-                <div class="logo-icon">🌿</div>
-                <h2>Made<span>Biotech</span></h2>
-                <p class="desc">Biomass biorefinery processes engineering and scientific consulting helper.</p>
-                <div class="btn-group">
-                    <a href="/madebiotech/index.html" class="btn mb-btn-new">View Revamped Version</a>
-                    <a href="https://web.archive.org/web/20250320191830/https://www.madebiotech.com/" class="btn btn-old" target="_blank" rel="noopener">View Old Archived Version</a>
-                </div>
-            </div>
+    <main class="grid">
+      <!-- MadeBiotech Portal Card -->
+      <div class="card mb">
+        <div class="card-top">
+          <span class="badge">Biorefinery</span>
+          <h2>Made<span>Biotech</span></h2>
+          <p class="desc">Engineering industrial biotechnology processes and sustainable biomass fractionation.</p>
+        </div>
+        <div class="links">
+          <a href="madebiotech/index.html" class="btn btn-new">Launch Revamped Site</a>
+          <a href="https://web.archive.org/web/20250320191830/https://www.madebiotech.com/" class="btn btn-old" target="_blank" rel="noopener">Archive Snapshot</a>
+        </div>
+      </div>
 
-            <!-- Naturextracts Card -->
-            <div class="portal-card nx-card">
-                <div class="logo-icon">🔬</div>
-                <h2>Nature<span>Xtracts</span></h2>
-                <p class="desc">State-of-the-art bioprocesses and custom manufacturing partner.</p>
-                <div class="btn-group">
-                    <a href="/naturextracts/index.html" class="btn nx-btn-new">View Revamped Version</a>
-                    <a href="https://web.archive.org/web/20241115022242/https://www.naturextracts.com/" class="btn btn-old" target="_blank" rel="noopener">View Old Archived Version</a>
-                </div>
-            </div>
-        </main>
+      <!-- NatureXtracts Portal Card -->
+      <div class="card nx">
+        <div class="card-top">
+          <span class="badge">Supercritical fluid CO2</span>
+          <h2>Nature<span>Xtracts</span></h2>
+          <p class="desc">State-of-the-art green chemical extraction and custom bio-manufacturing operations.</p>
+        </div>
+        <div class="links">
+          <a href="naturextracts/index.html" class="btn btn-new">Launch Revamped Site</a>
+          <a href="https://web.archive.org/web/20241115022242/https://www.naturextracts.com/" class="btn btn-old" target="_blank" rel="noopener">Archive Snapshot</a>
+        </div>
+      </div>
+    </main>
 
-        <footer>
-            Madebiotech & Naturextracts &copy; 2026. All rights reserved.
-        </footer>
-    </div>
+    <footer>
+      &copy; 2026 Biotech Portals. All rights reserved.
+    </footer>
+  </div>
 
 </body>
 </html>
