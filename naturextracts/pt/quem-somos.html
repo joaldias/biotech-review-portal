@@ -21,11 +21,11 @@
           <img src="../logo_naturextracts.jpg" alt="NatureXtracts Logo">
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="tecnologia.html">Tecnologia</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="quem-somos.html" class="active">Quem Somos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="../company.html">EN</a></li>
         </ul>
@@ -43,19 +43,27 @@
     </header>
 
     <section class="page-hero reveal">
-        <div class="breadcrumb"><a href="index.html">Home</a> > Quem Somos</div>
-        <h1>Quem <span>Somos</span></h1>
-        <p>Instalações industriais avançadas combinadas com consultoria científica de excelência na Ilha da Madeira.</p>
+        <div class="page-hero-inner">
+            <div class="breadcrumb">
+              <a href="index.html">Início</a>
+              <span>/</span>
+              <span class="current">Quem Somos</span>
+            </div>
+            <h1>Sobre a <span>NatureXtracts</span></h1>
+            <p>Uma biorrefinaria de química verde sediada na Ilha da Madeira, desenvolvendo bioprocessos sustentáveis e de alta eficiência.</p>
+        </div>
     </section>
 
     <section class="section reveal">
         <div class="split reveal">
-            <div class="split-content">
-                <h2>A Nossa Missão</h2>
-                <p>O nosso principal objetivo é potenciar os negócios através de processos industriais modernos, ambientalmente limpos, que entreguem qualidade reprodutível. Combinamos maquinaria europeia altamente especializada com experiência científica em bioprocessos naturais, fornecendo a base para o desenvolvimento seguro e eficaz dos produtos dos nossos clientes.</p>
+            <div class="split-text">
+                <h3>A Nossa Visão e Missão</h3>
+                <p>A NatureXtracts é uma biorrefinaria que produz através de química verde. Isto significa que a nossa exploração dos recursos naturais se baseia no desenvolvimento de processos sustentáveis, de elevada eficiência e com baixíssimo impacto ambiental.</p>
+                <p>A nossa missão é promover o conceito de biorrefinaria, produzindo e exportando produtos de elevado valor acrescentado, utilizando processos limpos com baixo impacto ambiental e elevado conteúdo tecnológico.</p>
+                <p>A nossa equipa multidisciplinar — composta por investigadores, químicos analíticos e engenheiros de processos químicos — trabalha em conjunto para fornecer soluções valiosas no desenvolvimento e otimização de ingredientes naturais.</p>
             </div>
-            <div class="split-image" style="display:flex; justify-content:center; align-items:center;">
-                 <img src="../images/logo_naturextracts.jpg" alt="NatureXtracts Logo" loading="lazy" style="max-width: 300px; border-radius: 8px;">
+            <div class="split-img">
+                <img src="../images/pdf_images/page_2_img_1.jpeg" alt="Laboratório de Bioprocessos Multidisciplinares" loading="lazy">
             </div>
         </div>
 
@@ -67,11 +75,29 @@
         </div>
     </section>
 
+    <section class="section reveal" style="background: rgba(6, 18, 14, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); text-align: center;">
+        <div class="section-header">
+            <h2>Descarregar <span>Material de Apresentação</span></h2>
+            <p>Obtenha uma visão abrangente das nossas instalações, tecnologias limhas e processos de extração padronizados.</p>
+        </div>
+        <div style="margin: 2rem auto; max-width: 400px;" class="card">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">📄</div>
+            <h3>Brochura da Empresa</h3>
+            <p>Descarregue a nossa brochura corporativa oficial para obter especificações técnicas completas e informações sobre os processos.</p>
+            <a href="../images/naturextracts_web.pdf" class="btn btn-primary" download style="margin-top: 1.5rem;">Descarregar PDF</a>
+        </div>
+    </section>
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
+          <h4>NatureXtracts</h4>
+          <p>Parceiro de produção sob contrato diferenciado, desenvolvendo processos sustentáveis com baixo impacto ambiental e alto valor tecnológico.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Links Rápidos</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="tecnologia.html">Tecnologia</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="produtos.html">Produtos</a></li>
@@ -79,11 +105,18 @@
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Sede</h4>
+          <p>Zona Franca Industrial Plataforma 28,<br>
+             Pav. Industrial K, Módulo 2<br>
+             9200-047 Caniçal, Ilha da Madeira, Portugal</p>
+          <p>Email: geral@naturextracts.com</p>
+        </div>
       </div>
       <div class="footer-bottom">
         <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
-            <span>© 2026 NatureXtracts — Produção Personalizada. Todos os direitos reservados.</span>
-            <span>geral@naturextracts.com</span>
+            <span>© 2026 NatureXtracts, S.A. Todos os direitos reservados.</span>
+            <span>Biorrefinaria de Química Verde</span>
         </div>
       </div>
     </footer>
@@ -106,6 +139,6 @@
         localStorage.setItem('theme', newTheme);
       });
     }
-</script>
+  </script>
 </body>
 </html>
