@@ -11,6 +11,8 @@
     --border-color: rgba(16, 185, 129, 0.12);
     --text-main: #f3f4f6;
     --text-muted: #9ca3af;
+    --text-title: #ffffff;
+    --footer-bg: #050904;
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
     --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -26,6 +28,8 @@
     --border-color: rgba(16, 185, 129, 0.18);
     --text-main: #06100c;
     --text-muted: #496356;
+    --text-title: #06100c;
+    --footer-bg: #e1ede5;
     --header-bg: rgba(243, 246, 244, 0.75);
     --header-scrolled: rgba(243, 246, 244, 0.9);
 }
@@ -194,7 +198,7 @@ header.scrolled {
     font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    color: #ffffff;
+    color: var(--text-title);
 }
 
 .logo-text span {
@@ -251,7 +255,7 @@ header.scrolled {
 }
 
 .nav-links a:hover {
-    color: #fff;
+    color: var(--text-title);
 }
 
 .nav-links a:hover::after,
@@ -282,7 +286,7 @@ header.scrolled {
     display: block;
     width: 26px;
     height: 2px;
-    background: #fff;
+    background: var(--text-title);
     border-radius: 2px;
     transition: var(--transition-smooth);
 }
@@ -320,7 +324,7 @@ header.scrolled {
     font-weight: 800;
     letter-spacing: -0.04em;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: var(--text-title);
 }
 
 .hero-text h1 span {
@@ -393,7 +397,7 @@ header.scrolled {
 .btn-outline:hover {
     border-color: var(--primary);
     background: rgba(16, 185, 129, 0.05);
-    color: #fff;
+    color: var(--text-title);
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(16, 185, 129, 0.1);
 }
@@ -492,7 +496,7 @@ header.scrolled {
     letter-spacing: -0.04em;
     display: block;
     margin-bottom: 0.2rem;
-    background: linear-gradient(135deg, #fff, var(--primary));
+    background: linear-gradient(135deg, var(--text-title), var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -524,7 +528,7 @@ header.scrolled {
     font-weight: 800;
     letter-spacing: -0.03em;
     margin-bottom: 1rem;
-    color: #fff;
+    color: var(--text-title);
 }
 
 .section-header h2 span {
@@ -596,7 +600,7 @@ header.scrolled {
     font-family: var(--font-heading);
     font-size: 1.35rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-title);
     margin-bottom: 0.8rem;
     transition: var(--transition-fast);
 }
@@ -648,7 +652,7 @@ header.scrolled {
     font-family: var(--font-heading);
     font-size: 2.2rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--text-title);
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
     line-height: 1.25;
@@ -754,10 +758,10 @@ header.scrolled {
 .form-group textarea {
     width: 100%;
     padding: 1rem 1.3rem;
-    background: rgba(10, 20, 16, 0.6);
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
-    color: #fff;
+    color: var(--text-main);
     font-family: var(--font-body);
     font-size: 0.98rem;
     transition: var(--transition-smooth);
@@ -770,7 +774,7 @@ header.scrolled {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
-    background: rgba(10, 20, 16, 0.8);
+    background: var(--dark-surface);
 }
 
 .form-group textarea {
@@ -780,7 +784,7 @@ header.scrolled {
 
 .form-group select option {
     background: var(--dark-surface);
-    color: #fff;
+    color: var(--text-main);
 }
 
 /* ── Page Hero ───────────────────────────────────────── */
@@ -822,7 +826,7 @@ header.scrolled {
     font-size: 3.2rem;
     font-weight: 800;
     letter-spacing: -0.03em;
-    color: #fff;
+    color: var(--text-title);
     margin-bottom: 1rem;
 }
 
@@ -839,7 +843,7 @@ header.scrolled {
 footer {
     border-top: 1px solid var(--border-color);
     padding: 5rem 2rem 2.5rem;
-    background: #040907;
+    background: var(--footer-bg);
     position: relative;
     z-index: 10;
 }
@@ -856,7 +860,7 @@ footer {
     font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--text-title);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
