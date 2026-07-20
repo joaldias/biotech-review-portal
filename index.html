@@ -148,13 +148,12 @@
       transition: transform 0.3s ease;
     }
 
-    /* Soft blend/glow for logos if they have slight backgrounds */
+    /* Modern color inversion filter for dark theme compatibility */
     .mb .portal-logo {
-      filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.2));
+      filter: invert(1) hue-rotate(180deg) brightness(1.2) drop-shadow(0 4px 12px rgba(16, 185, 129, 0.3));
     }
     .nx .portal-logo {
-      filter: drop-shadow(0 4px 12px rgba(132, 204, 22, 0.2));
-      border-radius: 4px;
+      filter: invert(1) hue-rotate(180deg) brightness(1.2) drop-shadow(0 4px 12px rgba(132, 204, 22, 0.3));
     }
 
     .card:hover .portal-logo {
@@ -279,7 +278,7 @@
       <div class="card mb">
         <div class="card-top">
           <div class="logo-container">
-            <img src="madebiotech/images/madebiotech.png" alt="MadeBiotech Logo" class="portal-logo">
+            <img src="madebiotech_logo.png" alt="MadeBiotech Logo" class="portal-logo">
           </div>
           <span class="badge">Biorefinery</span>
           <h2>Made<span>Biotech</span></h2>
@@ -295,7 +294,7 @@
       <div class="card nx">
         <div class="card-top">
           <div class="logo-container">
-            <img src="naturextracts/logo_naturextracts.jpg" alt="NatureXtracts Logo" class="portal-logo">
+            <img src="naturextracts_logo.jpg" alt="NatureXtracts Logo" class="portal-logo">
           </div>
           <span class="badge">Supercritical fluid CO2</span>
           <h2>Nature<span>Xtracts</span></h2>
