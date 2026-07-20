@@ -5,3 +5,4 @@ da47cf614db12998538d4a46748475d8b1983cd3 5c0cd5a27e20a6f1d56268f8d05ae965391470c
 cfd7d60fc7472823dd20d0109997c0b042c7a122 f868713dff42e306b14fd26036aad92eb7480469 joaldias <joaldi@gmail.com> 1784563478 +0100	commit: security: remove leaked Google Maps API Key and update assets
 f868713dff42e306b14fd26036aad92eb7480469 d6fc19251a23fc5ad930f5759b3eed0aecc9a433 joaldias <joaldi@gmail.com> 1784563559 +0100	commit: Revamp site with premium design from presentation and custom high-tech images
 d6fc19251a23fc5ad930f5759b3eed0aecc9a433 1a114edecf0a1ba9663f3c9a649c1f36e1e790e6 joaldias <joaldi@gmail.com> 1784564396 +0100	commit: Integrate exact presentation PDF images and content
+1a114edecf0a1ba9663f3c9a649c1f36e1e790e6 5ab67bcd604752777e237a078e7053dd019b12b0 joaldias <joaldi@gmail.com> 1784566310 +0100	commit: Major revamp: mobile nav, contact/products/company pages, trust bar, check-lists, fixed split layouts, new wide hero image, all audit fixes applied

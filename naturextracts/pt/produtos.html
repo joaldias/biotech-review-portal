@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NatureXtracts - Produtos Naturais">
+    <title>NatureXtracts | Produtos</title>
+    <link href="../templates/nature_v1_7_logowhite/css/custom_improvements.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="nav-container">
+        <a href="index.html" class="logo">Nature<span>Xtracts</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tecnologia.html">Tecnologia</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="quem-somos.html">Quem Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="../products.html">EN</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="breadcrumb"><a href="index.html">Home</a> > Produtos</div>
+        <h1>Produtos <span>Naturais</span></h1>
+        <p>Um catálogo de extratos naturais premium, óleos essenciais e hidrolatos de alta pureza.</p>
+    </section>
+
+    <section class="section">
+        <div class="grid-3">
+            <div class="card">
+                <h3>Óleos Essenciais</h3>
+                <p>Frações voláteis 100% puras e não adulteradas, ideais para nutracêuticos, cosmética avançada e aromaterapia.</p>
+            </div>
+            <div class="card">
+                <h3>Extratos de CO2</h3>
+                <p>Extratos isentos de solventes com perfis bioquímicos perfeitamente preservados, mantendo as propriedades organoléticas idênticas ao material original.</p>
+            </div>
+            <div class="card">
+                <h3>Hidrolatos</h3>
+                <p>Águas florais ricas em compostos hidro-solúveis, suaves mas ativas, com elevada aplicação na indústria dermocosmética.</p>
+            </div>
+            <div class="card">
+                <h3>Pós Liofilizados</h3>
+                <p>Pós secos e estáveis com longa vida útil e preservação da estrutura biológica, ótimos para formulações e sumos funcionais.</p>
+            </div>
+            <div class="card">
+                <h3>Extratos de Algas</h3>
+                <p>Macro e microalgas ricas em fitonutrientes processadas para retenção máxima dos seus compostos ativos.</p>
+            </div>
+            <div class="card">
+                <h3>Formulações Personalizadas</h3>
+                <p>Misturas especiais à medida com as concentrações exatas requeridas pela sua equipa de I&D, com rastreabilidade completa e validação de qualidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tecnologia.html">Tecnologia</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
+            <span>© 2026 NatureXtracts — Produção Personalizada. Todos os direitos reservados.</span>
+            <span>geral@naturextracts.com</span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector('.hamburger');
+      const nav = document.querySelector('.nav-links');
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('open');
+        nav.classList.toggle('open');
+      });
+    </script>
+</body>
+</html>

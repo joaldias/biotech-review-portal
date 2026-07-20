@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MadeBiotech - Contacto">
+  <title>MadeBiotech - Contacto</title>
+  <link href="../templates/yootheme/cache/custom_improvements.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Made<span>Biotech</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="projectos.html">Projetos</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="../contact.html">EN</a></li>
+      </ul>
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">Home > Contacto</div>
+        <h1>Entre em <span>Contacto</span></h1>
+        <p>Interessado em colaborar ou pedir um orçamento? Preencha o formulário abaixo e responderemos no prazo de 2 dias úteis.</p>
+      </div>
+    </section>
+
+    <section class="contact-section section">
+      <form action="#" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <input type="text" placeholder="O seu nome">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="A sua empresa">
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <input type="email" placeholder="seu@email.com">
+          </div>
+          <div class="form-group">
+            <input type="tel" placeholder="+351 xxx xxx xxx">
+          </div>
+        </div>
+        <div class="form-group" style="width: 100%;">
+          <select style="width: 100%; padding: 0.5rem;">
+            <option>Investigação Contratada</option>
+            <option>Escala Tecnológica</option>
+            <option>Valorização de PI</option>
+            <option>Consultoria Técnica</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-group" style="width: 100%;">
+          <textarea placeholder="Fale-nos sobre o seu projeto ou pedido..." style="width: 100%; min-height: 150px; padding: 0.5rem;"></textarea>
+        </div>
+        <div style="text-align: center; margin-top: 1rem;">
+          <button type="submit" class="btn btn-primary">Enviar Mensagem →</button>
+        </div>
+      </form>
+
+      <div class="card" style="margin-top: 3rem; text-align: center; max-width: 400px; margin-left: auto; margin-right: auto;">
+        <h3>Sede</h3>
+        <p>Ilha da Madeira</p>
+        <p>Portugal</p>
+        <a href="mailto:geral@madebiotech.com">geral@madebiotech.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="projectos.html">Projetos</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 MadeBiotech CR & D, S.A. Todos os direitos reservados.</span>
+      <span>geral@madebiotech.com</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav-links');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
