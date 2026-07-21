@@ -13,53 +13,6 @@
     <meta name="description" content="NatureXtracts - Contacto">
     <title>NatureXtracts | Contacto</title>
     <link href="../templates/nature_v1_7_logowhite/css/custom_improvements.css" rel="stylesheet">
-    <style>
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-top: 2rem;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: inherit;
-        }
-        .contact-form button {
-            align-self: flex-start;
-            padding: 1rem 2rem;
-            background: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .contact-form button:hover {
-            background: #2a7a40;
-        }
-        .address-block {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-        .address-block h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        @media (max-width: 768px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -68,12 +21,12 @@
           <img src="../logo_naturextracts.jpg" alt="NatureXtracts Logo">
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="tecnologia.html">Tecnologia</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="quem-somos.html">Quem Somos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
           <li><a href="../contact.html">EN</a></li>
         </ul>
       <button class="theme-toggle" aria-label="Toggle Theme">
@@ -90,32 +43,58 @@
     </header>
 
     <section class="page-hero reveal">
-        <div class="breadcrumb"><a href="index.html">Home</a> > Contacto</div>
-        <h1>Pedir <span>Orçamento</span></h1>
-        <p>Entre em contacto connosco para saber mais sobre as nossas soluções de bioprocessamento e solicitar um orçamento.</p>
+        <div class="page-hero-inner">
+            <div class="breadcrumb">
+              <a href="index.html">Início</a>
+              <span>/</span>
+              <span class="current">Contacto</span>
+            </div>
+            <h1>Trabalhe <span>Connosco</span></h1>
+            <p>Entre em contacto com a nossa equipa de engenheiros de desenvolvimento de processos e especialistas para discutir os seus requisitos de extração ou produção personalizada.</p>
+        </div>
     </section>
 
     <section class="section reveal">
-        <div class="contact-container">
-            <div>
-                <h2>Fale Connosco</h2>
-                <form class="contact-form" action="#" method="POST">
-                    <input type="text" name="name" placeholder="Nome Completo" required>
-                    <input type="email" name="email" placeholder="Endereço de E-mail" required>
-                    <input type="text" name="company" placeholder="Empresa">
-                    <textarea name="message" rows="5" placeholder="A sua mensagem" required></textarea>
-                    <button type="submit">Enviar Mensagem</button>
-                </form>
+        <div class="split reveal">
+            <div class="split-text">
+                <h3>Endereço da Sede</h3>
+                <p style="font-size: 1.15rem; color: var(--text-title); font-weight: 500; margin-bottom: 1rem;">NatureXtracts, S.A.</p>
+                <p style="line-height: 1.8;">
+                    Zona Franca Industrial Plataforma 28,<br>
+                    Pav. Industrial K, Módulo 2<br>
+                    9200-047 Caniçal<br>
+                    Ilha da Madeira - Portugal
+                </p>
+                <div style="margin-top: 2rem;">
+                    <p><strong>T:</strong> +351 291 639 800</p>
+                    <p><strong>F:</strong> +351 291 750 251</p>
+                    <p><strong>E:</strong> <a href="mailto:geral@naturextracts.com" style="color: var(--primary); text-decoration: none;">geral@naturextracts.com</a></p>
+                    <p><strong>W:</strong> <a href="https://www.naturextracts.com" target="_blank" style="color: var(--primary); text-decoration: none;">www.naturextracts.com</a></p>
+                </div>
             </div>
-            <div class="address-block">
-                <h3>Sede</h3>
-                <p>
-                    <strong>NatureXtracts / Madebiotech</strong><br>
-                    Madeira, Portugal<br>
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    <strong>Email:</strong> geral@naturextracts.com<br>
-                </p>
+
+            <div class="contact-section">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" required placeholder="João Silva">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" required placeholder="joao@exemplo.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Assunto</label>
+                        <input type="text" id="subject" required placeholder="Pedido de Orçamento de Extração">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" required placeholder="Fale-nos sobre a sua matéria-prima e objetivos de processamento..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Enviar Mensagem</button>
+                </form>
             </div>
         </div>
     </section>
@@ -123,8 +102,13 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
+          <h4>NatureXtracts</h4>
+          <p>Parceiro de produção sob contrato diferenciado, desenvolvendo processos sustentáveis com baixo impacto ambiental e alto valor tecnológico.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Links Rápidos</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="tecnologia.html">Tecnologia</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="produtos.html">Produtos</a></li>
@@ -132,12 +116,17 @@
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Sede</h4>
+          <p>Zona Franca Industrial Plataforma 28,<br>
+             Pav. Industrial K, Módulo 2<br>
+             9200-047 Caniçal, Ilha da Madeira, Portugal</p>
+          <p>Email: geral@naturextracts.com</p>
+        </div>
       </div>
       <div class="footer-bottom">
-        <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
-            <span>© 2026 NatureXtracts — Produção Personalizada. Todos os direitos reservados.</span>
-            <span>geral@naturextracts.com</span>
-        </div>
+        <span>© 2026 NatureXtracts, S.A. Todos os direitos reservados.</span>
+        <span>Biorrefinaria de Química Verde</span>
       </div>
     </footer>
 
@@ -174,6 +163,6 @@
 
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
-</script>
+  </script>
 </body>
 </html>

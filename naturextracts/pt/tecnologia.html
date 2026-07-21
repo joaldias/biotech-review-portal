@@ -10,7 +10,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NatureXtracts - Bioprocessos de Última Geração">
+    <meta name="description" content="NatureXtracts - Tecnologia">
     <title>NatureXtracts | Tecnologia</title>
     <link href="../templates/nature_v1_7_logowhite/css/custom_improvements.css" rel="stylesheet">
 </head>
@@ -21,8 +21,8 @@
           <img src="../logo_naturextracts.jpg" alt="NatureXtracts Logo">
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="tecnologia.html">Tecnologia</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="tecnologia.html" class="active">Tecnologia</a></li>
           <li><a href="servicos.html">Serviços</a></li>
           <li><a href="produtos.html">Produtos</a></li>
           <li><a href="quem-somos.html">Quem Somos</a></li>
@@ -33,8 +33,7 @@
         <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
-
-        <button class="hamburger" aria-label="Toggle Navigation">
+      <button class="hamburger" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
           <span></span>
@@ -43,50 +42,67 @@
     </header>
 
     <section class="page-hero reveal">
-        <div class="breadcrumb"><a href="index.html">Home</a> > Tecnologia</div>
-        <h1>Bioprocessos de <span>Última Geração</span></h1>
-        <p>Tecnologias de extração industrial concebidas para preservar a integridade dos compostos naturais sensíveis à temperatura.</p>
+        <div class="page-hero-inner">
+            <div class="breadcrumb">
+              <a href="index.html">Início</a>
+              <span>/</span>
+              <span class="current">Tecnologia</span>
+            </div>
+            <h1>Bioprocessos de <span>Última Geração</span></h1>
+            <p>As nossas tecnologias de processamento avançadas e ecológicas foram concebidas para extrair e proteger compostos valiosos da biomassa virgem.</p>
+        </div>
     </section>
 
     <section class="section reveal">
+        <!-- Extração sCO2 -->
         <div class="split reveal">
-            <div class="split-content">
-                <h2>Extração de CO2 Supercrítico</h2>
-                <p>O nosso processo de extração a baixa temperatura garante a preservação de compostos termolábeis e voláteis. Sem exposição ao oxigénio, produzimos extratos de qualidade superior que mantêm as suas propriedades ativas intatas.</p>
-                <p>Uma vez que o CO2 é considerado seguro (GRAS pela FDA), o extrato final não contém resíduos de solventes químicos artificiais. Estes extratos são adequados para aplicações nas indústrias alimentar, farmacêutica e cosmética.</p>
+            <div class="split-text">
+                <h3>Extração de CO₂ Supercrítico</h3>
+                <p>A extração de CO₂ supercrítico é uma tecnologia diferenciadora e inovadora para a produção de compostos de elevado valor acrescentado.</p>
+                <p>Operando como um processo de alta pressão a temperaturas relativamente baixas sob ausência total de oxigénio, preserva os compostos ativos sensíveis da degradação térmica e da oxidação.</p>
+                <p>O CO₂ é de grau alimentar e possui a designação GRAS (Geralmente Reconhecido como Seguro) pela FDA. Os extratos obtidos são estéreis, altamente puros, completamente isentos de resíduos de solventes e não necessitam de conservantes.</p>
             </div>
-            <div class="split-image">
-                <img src="../images/pdf_images/page_3_img_1.jpeg" alt="Extração de CO2 Supercrítico" loading="lazy">
-            </div>
-        </div>
-
-        <div class="split reverse" style="margin-top: 4rem;">
-            <div class="split-image">
-                <img src="../images/pdf_images/page_4_img_1.jpeg" alt="Destilação a Vapor e Hidrodestilação" loading="lazy">
-            </div>
-            <div class="split-content">
-                <h2>Destilação a Vapor e Hidrodestilação</h2>
-                <p>Extração avançada de óleos essenciais através do arrasto por vapor de água, permitindo separar as frações voláteis da matriz biológica, recuperando também os preciosos hidrolatos (águas florais).</p>
+            <div class="split-img-wrapper">
+                <img src="../images/pdf_images/page_3_img_1.jpeg" alt="Unidade de Extração CO2 Supercrítico" loading="lazy">
             </div>
         </div>
 
-        <div class="split" style="margin-top: 4rem;">
-            <div class="split-content">
-                <h2>Liofilização (Secagem por Congelação)</h2>
-                <p>Processo de desidratação através de sublimação sob vácuo que remove a água enquanto a amostra está congelada. Permite a obtenção de pós de altíssima qualidade mantendo a estrutura biológica original sem degradação térmica.</p>
+        <!-- Destilação -->
+        <div class="split reverse reveal">
+            <div class="split-img-wrapper">
+                <img src="../images/pdf_images/page_4_img_1.jpeg" alt="Unidade de Destilação a Vapor" loading="lazy">
             </div>
-            <div class="split-image">
-                <img src="../images/pdf_images/page_5_img_2.jpeg" alt="Liofilização" loading="lazy">
+            <div class="split-text">
+                <h3>Destilação a Vapor e Hidrodestilação</h3>
+                <p>Utilizada para extrair óleos essenciais e hidrolatos 100% puros e naturais de matéria vegetal de primeira qualidade.</p>
+                <p>Na destilação a vapor, o vapor controlado arrasta as moléculas aromáticas voláteis a uma velocidade rápida, evitando danos no óleo. A degradação térmica é evitada monitorizando estritamente a temperatura e o fluxo de vapor.</p>
+                <p>Na hidrodestilação tradicional, utiliza-se água em vez de vapor. Em ambos os métodos, os vapores são condensados para separar compostos terapêuticos de alta qualidade.</p>
             </div>
         </div>
 
-        <div class="split reverse" style="margin-top: 4rem;">
-            <div class="split-image">
-                <img src="../images/pdf_images/page_6_img_2.jpeg" alt="Fermentação em Biorreatores" loading="lazy">
+        <!-- Liofilização -->
+        <div class="split reveal">
+            <div class="split-text">
+                <h3>Liofilização (Secagem por Congelação)</h3>
+                <p>A liofilização é um processo altamente controlado de remoção de água utilizado para preservar biomateriais delicados.</p>
+                <p>Os produtos são primeiro congelados e subsequentemente submetidos a condições de pressão muito próximas do vácuo, permitindo a sublimação das moléculas de água diretamente do estado sólido para o gasoso.</p>
+                <p>Esta é a escolha ideal para preservar compostos de origem biológica sensíveis à temperatura — como enzimas e extratos ativos —, aumentando dramaticamente a vida útil e garantindo a conveniência de transporte.</p>
             </div>
-            <div class="split-content">
-                <h2>Fermentação em Biorreatores</h2>
-                <p>Cultura de precisão e em escala de bactérias e leveduras utilizando biorreatores avançados com controlo de processos (pH, oxigenação, temperatura). Fundamental para a obtenção de metabolitos específicos e crescimento de biomassa.</p>
+            <div class="split-img-wrapper">
+                <img src="../images/pdf_images/page_5_img_2.jpeg" alt="Liofilizador" loading="lazy">
+            </div>
+        </div>
+
+        <!-- Biorreator -->
+        <div class="split reverse reveal">
+            <div class="split-img-wrapper">
+                <img src="../images/pdf_images/page_6_img_2.jpeg" alt="Biorreator Industrial" loading="lazy">
+            </div>
+            <div class="split-text">
+                <h3>Fermentação em Biorreatores</h3>
+                <p>A fermentação é um mecanismo biológico natural realizado por culturas direcionadas de bactérias e leveduras para converter açúcares em ácidos orgânicos, álcoois e metabolitos de elevado valor.</p>
+                <p>A NatureXtracts aplica o controlo de biorreatores de última geração para expandir a tecnologia de fermentação para as indústrias Farmacêutica, Cosmética e de Bioenergia.</p>
+                <p>As aplicações principais incluem o crescimento de células-alvo, a produção de derivados de fermentação como exopolissacarídeos e a hidrólise enzimática controlada.</p>
             </div>
         </div>
     </section>
@@ -94,8 +110,13 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
+          <h4>NatureXtracts</h4>
+          <p>Parceiro de produção sob contrato diferenciado, desenvolvendo processos sustentáveis com baixo impacto ambiental e alto valor tecnológico.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Links Rápidos</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Início</a></li>
             <li><a href="tecnologia.html">Tecnologia</a></li>
             <li><a href="servicos.html">Serviços</a></li>
             <li><a href="produtos.html">Produtos</a></li>
@@ -103,12 +124,17 @@
             <li><a href="contacto.html">Contacto</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Sede</h4>
+          <p>Zona Franca Industrial Plataforma 28,<br>
+             Pav. Industrial K, Módulo 2<br>
+             9200-047 Caniçal, Ilha da Madeira, Portugal</p>
+          <p>Email: geral@naturextracts.com</p>
+        </div>
       </div>
       <div class="footer-bottom">
-        <div style="display:flex; justify-content:space-between; flex-wrap: wrap;">
-            <span>© 2026 NatureXtracts — Produção Personalizada. Todos os direitos reservados.</span>
-            <span>geral@naturextracts.com</span>
-        </div>
+        <span>© 2026 NatureXtracts, S.A. Todos os direitos reservados.</span>
+        <span>Biorrefinaria de Química Verde</span>
       </div>
     </footer>
 
@@ -145,6 +171,6 @@
 
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
-</script>
+  </script>
 </body>
 </html>
