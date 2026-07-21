@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 157aa85a02e6be7d860057e03cf44eb6cc5ea17d joaldias <joaldi@gmail.com> 1784561871 +0100	commit (initial): Initial commit of archived Madebiotech site
+157aa85a02e6be7d860057e03cf44eb6cc5ea17d d00b5febbc0652f77395696b17728e7793a15d4e joaldias <joaldi@gmail.com> 1784562198 +0100	commit: Fix gzipped assets
+d00b5febbc0652f77395696b17728e7793a15d4e 6e507b9871e189a80d78a0a863177d133e75fa57 joaldias <joaldi@gmail.com> 1784562700 +0100	commit: Add premium replacement images for unarchived assets
+6e507b9871e189a80d78a0a863177d133e75fa57 0244eeded91fa39dc61f9f7d3de807f944da1be6 joaldias <joaldi@gmail.com> 1784563137 +0100	commit: Inject premium style improvements
+0244eeded91fa39dc61f9f7d3de807f944da1be6 88eebd090fc053ee6ddf90363f68aca117dc8cea joaldias <joaldi@gmail.com> 1784563557 +0100	commit: Revamp site with premium design from presentation and custom high-tech images
+88eebd090fc053ee6ddf90363f68aca117dc8cea 0e4cb802e7696fe8a3ba2c378819ada8bfe1b428 joaldias <joaldi@gmail.com> 1784564393 +0100	commit: Integrate exact presentation PDF images and content
+0e4cb802e7696fe8a3ba2c378819ada8bfe1b428 385490d349da2d8db77da5392da50f2c1105f853 joaldias <joaldi@gmail.com> 1784566307 +0100	commit: Major revamp: mobile nav, contact pages, trust bar, check-lists, projects/news stubs, new wide hero image, all audit fixes applied
+385490d349da2d8db77da5392da50f2c1105f853 01a3343aa7f68e1cf75f3b3b6732bb1af4bd6b55 joaldias <joaldi@gmail.com> 1784566791 +0100	commit: Add Portuguese translation support (pt/) and language switcher

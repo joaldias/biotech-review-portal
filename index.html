@@ -9,30 +9,32 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portal MadeBiotech & NatureXtracts - Comparando versões de arquivo e renovadas.">
+  <meta name="description" content="Portal MadeBiotech & NatureXtracts - Comparando versões de arquivo, Opção A (Antigravity) e Opção B (Claude).">
   <title>Portais de Biotecnologia</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #030705;
-      --card-bg: rgba(7, 15, 11, 0.4);
-      --border: rgba(16, 185, 129, 0.1);
+      --card-bg: rgba(7, 15, 11, 0.5);
+      --border: rgba(16, 185, 129, 0.12);
       --text: #f3f4f6;
       --text-muted: #8e9a93;
       --text-title: #ffffff;
-      --mb: #10b981;
-      --nx: #84cc16;
+      --archive-color: #94a3b8;
+      --opa-color: #10b981;
+      --opb-color: #f59e0b;
       --font-title: 'Outfit', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
     }
 
     [data-theme="light"] {
       --bg: #f5f7f5;
-      --card-bg: rgba(255, 255, 255, 0.75);
+      --card-bg: rgba(255, 255, 255, 0.85);
       --border: rgba(16, 185, 129, 0.18);
       --text: #0c140a;
       --text-muted: #4e6351;
       --text-title: #050904;
+      --archive-color: #475569;
     }
 
     * {
@@ -51,7 +53,7 @@
       justify-content: center;
       align-items: center;
       overflow-x: hidden;
-      padding: 2rem;
+      padding: 2.5rem 1.5rem;
       position: relative;
     }
 
@@ -59,39 +61,39 @@
     body::before {
       content: '';
       position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.04) 0%, transparent 70%);
-      top: 15%;
-      left: 10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+      top: 10%;
+      left: 5%;
       pointer-events: none;
     }
 
     body::after {
       content: '';
       position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(132, 204, 22, 0.03) 0%, transparent 70%);
-      bottom: 15%;
-      right: 10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.04) 0%, transparent 70%);
+      bottom: 10%;
+      right: 5%;
       pointer-events: none;
     }
 
     .container {
-      max-width: 960px;
+      max-width: 1200px;
       width: 100%;
       z-index: 10;
     }
 
     header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
     }
 
     header h1 {
       font-family: var(--font-title);
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       font-weight: 800;
       letter-spacing: -0.04em;
       margin-bottom: 0.75rem;
@@ -101,24 +103,24 @@
     }
 
     header p {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: var(--text-muted);
       letter-spacing: 0.02em;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 3rem 2.5rem;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      border-radius: 22px;
+      padding: 2.5rem 2rem;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
       flex-direction: column;
@@ -127,21 +129,26 @@
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
-    .card.mb:hover {
-      border-color: rgba(16, 185, 129, 0.3);
-      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.05);
+    .card.archive:hover {
+      border-color: rgba(148, 163, 184, 0.4);
+      box-shadow: 0 20px 40px rgba(148, 163, 184, 0.08);
     }
 
-    .card.nx:hover {
-      border-color: rgba(132, 204, 22, 0.3);
-      box-shadow: 0 20px 40px rgba(132, 204, 22, 0.05);
+    .card.op-a:hover {
+      border-color: rgba(16, 185, 129, 0.4);
+      box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08);
+    }
+
+    .card.op-b:hover {
+      border-color: rgba(245, 158, 11, 0.4);
+      box-shadow: 0 20px 40px rgba(245, 158, 11, 0.08);
     }
 
     .card-top {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -149,59 +156,63 @@
       width: 100%;
     }
 
-    /* Solid clean background to make brand logos stand out beautifully */
-    .logo-container {
-      height: 80px;
+    .dual-logo-container {
+      height: 75px;
       width: 100%;
       background: #ffffff;
       border-radius: 14px;
-      padding: 12px;
+      padding: 10px 16px;
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
       margin-bottom: 1.5rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
+      gap: 10px;
     }
 
-    .card:hover .logo-container {
+    .card:hover .dual-logo-container {
       transform: scale(1.02);
     }
 
-    .mb:hover .logo-container {
-      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
-    }
-
-    .nx:hover .logo-container {
-      box-shadow: 0 4px 20px rgba(132, 204, 22, 0.25);
-    }
-
-    .portal-logo {
+    .brand-mini-logo {
       max-height: 100%;
-      max-width: 90%;
+      max-width: 45%;
       object-fit: contain;
     }
 
     .badge {
       display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
+      font-size: 0.72rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 1.25rem;
+      letter-spacing: 0.09em;
+      margin-bottom: 1rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 50px;
     }
 
-    .mb .badge {
-      color: var(--mb);
+    .archive .badge {
+      color: var(--archive-color);
+      background: rgba(148, 163, 184, 0.12);
+      border: 1px solid rgba(148, 163, 184, 0.25);
     }
 
-    .nx .badge {
-      color: var(--nx);
+    .op-a .badge {
+      color: var(--opa-color);
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .op-b .badge {
+      color: var(--opb-color);
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     h2 {
       font-family: var(--font-title);
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       font-weight: 700;
       margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
@@ -214,21 +225,33 @@
 
     p.desc {
       color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.6;
+      font-size: 0.9rem;
+      line-height: 1.55;
     }
 
     .links {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 0.85rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      margin-bottom: -0.2rem;
     }
 
     .btn {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      padding: 0.85rem;
-      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
       font-size: 0.9rem;
       font-weight: 600;
       text-align: center;
@@ -236,53 +259,63 @@
       transition: all 0.25s ease;
     }
 
-    .mb .btn-new {
-      background: var(--mb);
-      color: #030705;
-    }
-
-    .mb .btn-new:hover {
-      background: #34d399;
-      transform: translateY(-2px);
-    }
-
-    .nx .btn-new {
-      background: var(--nx);
-      color: #030705;
-    }
-
-    .nx .btn-new:hover {
-      background: #a3e635;
-      transform: translateY(-2px);
-    }
-
-    .btn-old {
+    /* Archive Buttons */
+    .btn-archive {
       background: transparent;
-      border: 1.5px solid var(--border);
+      border: 1.5px solid rgba(148, 163, 184, 0.25);
       color: var(--text);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
-    .btn-old:hover {
+    .btn-archive:hover {
+      background: rgba(148, 163, 184, 0.15);
+      border-color: var(--archive-color);
       color: var(--text-title);
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     }
 
-    .card.mb .btn-old:hover {
-      background: rgba(16, 185, 129, 0.1);
-      border-color: var(--mb);
+    /* Opção A Buttons */
+    .btn-op-a {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #030705;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.2);
     }
 
-    .card.nx .btn-old:hover {
-      background: rgba(132, 204, 22, 0.1);
-      border-color: var(--nx);
+    .btn-op-a:hover {
+      background: linear-gradient(135deg, #34d399, #10b981);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+    }
+
+    /* Opção B Buttons */
+    .btn-op-b {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #030705;
+      font-weight: 700;
+      box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+    }
+
+    .btn-op-b:hover {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.35);
+    }
+
+    .btn-group-dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .btn-sm {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.83rem;
     }
 
     footer {
-      margin-top: 5rem;
+      margin-top: 4.5rem;
       text-align: center;
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
       opacity: 0.6;
     }
@@ -308,8 +341,8 @@
     }
 
     .theme-toggle:hover {
-      border-color: var(--mb);
-      color: var(--mb);
+      border-color: var(--opa-color);
+      color: var(--opa-color);
       background: rgba(16, 185, 129, 0.05);
     }
 
@@ -328,10 +361,10 @@
       display: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       .grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.75rem;
       }
       
       body {
@@ -355,39 +388,74 @@
   <div class="container">
     <header>
       <h1>Portal de Revisão Biotecnológica</h1>
-      <p>Compare snapshots do arquivo original com as novas versões renovadas</p>
+      <p>Compare as opções de renovação digital e snapshots originais</p>
     </header>
 
     <main class="grid">
-      <!-- MadeBiotech Portal Card -->
-      <div class="card mb">
+      <!-- Left Card: Versões de Arquivo -->
+      <div class="card archive">
         <div class="card-top">
-          <div class="logo-container">
-            <img src="madebiotech_logo.png" alt="MadeBiotech Logo" class="portal-logo">
+          <div class="dual-logo-container">
+            <img src="madebiotech_logo.png" alt="MadeBiotech Logo" class="brand-mini-logo">
+            <img src="naturextracts_logo.jpg" alt="NatureXtracts Logo" class="brand-mini-logo">
           </div>
-          <span class="badge">Biorrefinaria</span>
-          <h2>Made<span>Biotech</span></h2>
-          <p class="desc">Engenharia de processos de biotecnologia industrial e valorização de biomassa sustentável.</p>
+          <span class="badge">Wayback Machine</span>
+          <h2>Versões de <span>Arquivo</span></h2>
+          <p class="desc">Snapshots originais preservados do arquivo histórico da web antes do processo de renovação.</p>
         </div>
         <div class="links">
-          <a href="madebiotech/pt/index.html" class="btn btn-new">Iniciar Site Renovado (PT)</a>
-          <a href="https://web.archive.org/web/20250320191830/https://www.madebiotech.com/" class="btn btn-old" target="_blank" rel="noopener">Snapshot de Arquivo (20/03/2025)</a>
+          <a href="https://web.archive.org/web/20250320191830/https://www.madebiotech.com/" class="btn btn-archive" target="_blank" rel="noopener">MadeBiotech (20/03/2025)</a>
+          <a href="https://web.archive.org/web/20241115022242/https://www.naturextracts.com/" class="btn btn-archive" target="_blank" rel="noopener">NatureXtracts (15/11/2024)</a>
         </div>
       </div>
 
-      <!-- NatureXtracts Portal Card -->
-      <div class="card nx">
+      <!-- Center Card: Opção A (Antigravity) -->
+      <div class="card op-a">
         <div class="card-top">
-          <div class="logo-container">
-            <img src="naturextracts_logo.jpg" alt="NatureXtracts Logo" class="portal-logo">
+          <div class="dual-logo-container">
+            <img src="madebiotech_logo.png" alt="MadeBiotech Logo" class="brand-mini-logo">
+            <img src="naturextracts_logo.jpg" alt="NatureXtracts Logo" class="brand-mini-logo">
           </div>
-          <span class="badge">Fluido Supercrítico CO2</span>
-          <h2>Nature<span>Xtracts</span></h2>
-          <p class="desc">Extração química verde de última geração e operações de bio-manufatura sob medida.</p>
+          <span class="badge">Renovado • Antigravity</span>
+          <h2>Opção <span>A</span></h2>
+          <p class="desc">Versão renovada focada em otimização de performance, estrutura responsiva e navegação direta.</p>
         </div>
         <div class="links">
-          <a href="naturextracts/pt/index.html" class="btn btn-new">Iniciar Site Renovado (PT)</a>
-          <a href="https://web.archive.org/web/20241115022242/https://www.naturextracts.com/" class="btn btn-old" target="_blank" rel="noopener">Snapshot de Arquivo (15/11/2024)</a>
+          <div class="section-label">MadeBiotech</div>
+          <div class="btn-group-dual">
+            <a href="madebiotech/pt/index.html" class="btn btn-op-a btn-sm">MadeBiotech (PT)</a>
+            <a href="madebiotech/index.html" class="btn btn-op-a btn-sm">MadeBiotech (EN)</a>
+          </div>
+          <div class="section-label">NatureXtracts</div>
+          <div class="btn-group-dual">
+            <a href="naturextracts/pt/index.html" class="btn btn-op-a btn-sm">NatureXtracts (PT)</a>
+            <a href="naturextracts/index.html" class="btn btn-op-a btn-sm">NatureXtracts (EN)</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Card: Opção B (Claude) -->
+      <div class="card op-b">
+        <div class="card-top">
+          <div class="dual-logo-container">
+            <img src="madebiotech_logo.png" alt="MadeBiotech Logo" class="brand-mini-logo">
+            <img src="naturextracts_logo.jpg" alt="NatureXtracts Logo" class="brand-mini-logo">
+          </div>
+          <span class="badge">Alternativo • Claude</span>
+          <h2>Opção <span>B</span></h2>
+          <p class="desc">Versão alternativa desenvolvida com Claude, apresentando estética refinada e suporte bilingue.</p>
+        </div>
+        <div class="links">
+          <div class="section-label">MadeBiotech</div>
+          <div class="btn-group-dual">
+            <a href="madebiotech_claude/pt/index.html" class="btn btn-op-b btn-sm">MadeBiotech (PT)</a>
+            <a href="madebiotech_claude/index.html" class="btn btn-op-b btn-sm">MadeBiotech (EN)</a>
+          </div>
+          <div class="section-label">NatureXtracts</div>
+          <div class="btn-group-dual">
+            <a href="naturextracts_claude/pt/index.html" class="btn btn-op-b btn-sm">NatureXtracts (PT)</a>
+            <a href="naturextracts_claude/index.html" class="btn btn-op-b btn-sm">NatureXtracts (EN)</a>
+          </div>
         </div>
       </div>
     </main>
@@ -429,3 +497,4 @@
   </script>
 </body>
 </html>
+
