@@ -12,6 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="MadeBiotech Sustainable Biorefinery - Biomass Valorization & Industrial Biotechnology">
   <title>MadeBiotech - Sustainable Biorefinery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="templates/yootheme/cache/custom_improvements.css" rel="stylesheet">
 </head>
 <body>
@@ -90,14 +92,12 @@
         <span class="value">2011</span>
         <span class="label">Founded</span>
       </div>
-      <div class="trust-item">
-        <span class="value">Madeira</span>
-        <span class="label">Island Location</span>
       </div>
     </div>
 
     <section class="section">
       <div class="section-header reveal">
+        <span class="section-tag">R&amp;D Excellence</span>
         <h2>State-of-the-Art <span>Technology</span></h2>
         <p>Harnessing nature's potential through green chemistry, bioreactors, and precision extraction operations.</p>
       </div>
@@ -128,6 +128,7 @@
 
     <section class="section">
       <div class="section-header reveal">
+        <span class="section-tag">Corporate Resources</span>
         <h2>Company <span>Publications & Brochures</span></h2>
         <p>Download our official corporate brochure and research project documentation.</p>
       </div>
@@ -158,85 +159,31 @@
         <p>Developing sustainable biotechnology solutions and biorefinery processes to power the global transition to a circular bio-based economy.</p>
       </div>
       <div class="footer-col">
-        <h4>Navigation</h4>
+        <h3>Quick Links</h3>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="company.html">Company</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="news.html">News</a></li>
-          <li><a href="madebiotech_brochure.pdf" target="_blank" download>Company Brochure (PDF)</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact Info</h4>
-        <p>Madeira Island, Portugal<br>
-        Email: <a href="mailto:geral@madebiotech.com" style="color: var(--primary-light);">geral@madebiotech.com</a></p>
+        <h3>Global Headquarters</h3>
+        <p>MadeBiotech CR & D, S.A.<br>
+        Zona Franca Industrial, Plataforma 28<br>
+        Pavilhão Industrial K, Módulo 2<br>
+        9200-047 Caniçal, Madeira Island, Portugal</p>
+        <p style="margin-top: 1rem;"><strong>Phone:</strong> +351 291 639 800<br>
+        <strong>Email:</strong> geral@madebiotech.com</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 MadeBiotech CR & D, S.A. All rights reserved.</span>
-      <span>ISO 9001 Certified Laboratory</span>
+      <p>&copy; MadeBiotech CR & D, S.A. All rights reserved. | Sustainable Biorefinery Solutions</p>
     </div>
   </footer>
 
-  <script>
-    // Mobile navigation toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navLinks.classList.toggle('open');
-    });
-
-    // Scroll reveal animation implementation
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      revealElements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if(top < triggerBottom) {
-          el.classList.add('active');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
-    // Header scroll background behavior
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Interactive glass card light effect
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--x', `${x}px`);
-        card.style.setProperty('--y', `${y}px`);
-      });
-    });
-  
-    // Theme Toggle logic
-    const themeToggle = document.querySelector('.theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    }
-</script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

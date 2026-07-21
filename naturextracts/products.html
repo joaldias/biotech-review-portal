@@ -10,8 +10,10 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NatureXtracts - Products">
+    <meta name="description" content="NatureXtracts Products - Pure botanical extracts, essential oils, and nutritional supplements.">
     <title>NatureXtracts | Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="templates/nature_v1_7_logowhite/css/custom_improvements.css" rel="stylesheet">
 </head>
 <body>
@@ -102,8 +104,9 @@
     </section>
 
     <!-- Essential Oils & Hydrolats Portfolio -->
-    <section class="section" style="background: rgba(6, 18, 14, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <section class="section" style="background: var(--dark-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
         <div class="section-header">
+            <span class="section-tag">Product Portfolio</span>
             <h2>Botanical <span>Extracts</span> & Oils</h2>
             <p>100% pure, natural, and free from heavy metals or pesticides. Developed in accordance with European Pharmacopoeia standards.</p>
         </div>
@@ -173,39 +176,6 @@
       </div>
     </footer>
 
-    <script>
-      const btn = document.querySelector('.hamburger');
-      const nav = document.querySelector('.nav-links');
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('open');
-        nav.classList.toggle('open');
-      });
-    
-    // Theme Toggle logic
-    const themeToggle = document.querySelector('.theme-toggle');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-      });
-    }
-
-    // Scroll reveal animation implementation
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      revealElements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if(top < triggerBottom) {
-          el.classList.add('active');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-</script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
