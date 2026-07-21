@@ -175,6 +175,25 @@ header.scrolled {
     transition: var(--transition-smooth);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    transition: var(--transition-smooth);
+}
+
+.logo:hover img {
+    transform: scale(1.04);
+}
+
 .logo-wrapper {
     display: flex;
     align-items: center;
