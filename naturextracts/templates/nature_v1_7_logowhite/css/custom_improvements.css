@@ -1028,3 +1028,65 @@ footer {
         padding-bottom: 0;
     }
 }
+
+/* ── Nutrient Feature Cards (NX Immunity Essentials) ── */
+.nutrient-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+    width: 100%;
+}
+
+.nutrient-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.4rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nutrient-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 30px rgba(132, 204, 22, 0.2);
+}
+
+.nutrient-card .nutrient-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    background: rgba(132, 204, 22, 0.12);
+    padding: 0.3rem 0.65rem;
+    border-radius: 20px;
+    width: fit-content;
+    border: 1px solid rgba(132, 204, 22, 0.25);
+}
+
+.nutrient-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-title);
+    margin-top: 0.1rem;
+    letter-spacing: -0.01em;
+}
+
+.nutrient-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-muted);
+    margin: 0;
+}
