@@ -1059,8 +1059,30 @@ footer {
 }
 
 .fact-card .fact-icon {
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: var(--transition-smooth);
+}
+
+.fact-card .fact-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--primary);
+    stroke-width: 1.75;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.fact-card:hover .fact-icon {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.1));
+    transform: scale(1.08);
 }
 
 .fact-card .fact-number {
