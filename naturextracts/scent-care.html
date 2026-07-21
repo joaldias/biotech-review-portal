@@ -527,6 +527,21 @@ NatureXtracts essential oils are 100% pure and natural – they are carefully pr
         localStorage.setItem('theme', newTheme);
       });
     }
+
+    // Scroll reveal animation implementation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < triggerBottom) {
+          el.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
 </script> NatureXtracts. All rights reserved.</p></div>
                 
             

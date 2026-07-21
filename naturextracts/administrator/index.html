@@ -63,6 +63,21 @@ jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips
         localStorage.setItem('theme', newTheme);
       });
     }
+
+    // Scroll reveal animation implementation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < triggerBottom) {
+          el.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
 </script>
 
 <link href="templates/nature_v1_7_logowhite/css/custom_improvements.css" rel="stylesheet" />

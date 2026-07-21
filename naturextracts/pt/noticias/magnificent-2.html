@@ -495,7 +495,22 @@ GOOGLE_MAPS_API_KEY = "";
             
             
                 
-                    <div class="uk-panel uk-text-small uk-text-emphasis uk-margin uk-text-center"><p>©<script>document.write(new Date().getFullYear())</script> NatureXtracts. All rights reserved.</p></div>
+                    <div class="uk-panel uk-text-small uk-text-emphasis uk-margin uk-text-center"><p>©<script>document.write(new Date().getFullYear())
+    // Scroll reveal animation implementation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if(top < triggerBottom) {
+          el.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+</script> NatureXtracts. All rights reserved.</p></div>
                 
             
         
