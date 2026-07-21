@@ -29,7 +29,7 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="pt/index.html">PT</a></li>
         </ul>
-              <button class="theme-toggle" aria-label="Toggle Theme">
+      <button class="theme-toggle" aria-label="Toggle Theme">
         <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
         <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
       </button>
@@ -43,7 +43,7 @@
 
     <section class="hero">
         <div class="hero-grid">
-            <div class="hero-text">
+            <div class="hero-text reveal">
                 <h1>Quality Custom <span>Manufacturing</span> Partner</h1>
                 <p>NatureXtracts offers cutting-edge green chemistry and custom biomanufacturing solutions designed to extract and preserve high-value compounds from natural matrices.</p>
                 <div class="btn-group">
@@ -51,26 +51,28 @@
                     <a href="contact.html" class="btn btn-outline">Partner With Us</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/pdf_images/page_1_img_1.jpeg" alt="NatureXtracts Biorefinery" loading="lazy">
+            <div class="hero-image-wrapper reveal">
+                <div class="hero-image-container">
+                    <img src="images/pdf_images/page_1_img_1.jpeg" alt="NatureXtracts Biorefinery" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="trust-bar">
+    <section class="trust-bar reveal">
         <div class="trust-item"><span class="value">sCO2</span> <span class="label">Supercritical Fluid</span></div>
         <div class="trust-item"><span class="value">FDA</span> <span class="label">GRAS Status CO2</span></div>
         <div class="trust-item"><span class="value">100%</span> <span class="label">Pure & Natural</span></div>
         <div class="trust-item"><span class="value">HPLC/GC</span> <span class="label">Quality Controlled</span></div>
     </section>
 
-    <section class="section">
-        <div class="section-header">
+    <section class="section reveal">
+        <div class="section-header reveal">
             <h2>The Right <span>Custom Manufacturing</span> Partner</h2>
             <p>Providing custom, flexible manufacturing scale-up and process integration to meet the specific requirements of the food, cosmetic, and pharmaceutical industries.</p>
         </div>
         
-        <div class="split">
+        <div class="split reveal">
             <div class="split-text">
                 <h3>Tailor-Made Solutions</h3>
                 <p>The high flexibility of our modern equipment makes it possible to completely customize production to fit your exact demands.</p>
@@ -90,24 +92,30 @@
         </div>
     </section>
 
-    <section class="section" style="background: rgba(6, 18, 14, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <div class="section-header">
+    <section class="section reveal" style="background: rgba(6, 18, 14, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="section-header reveal">
             <h2>Core <span>Capabilities</span></h2>
             <p>Differentiating features of our advanced plant extraction and processing plant.</p>
         </div>
         <div class="grid-3">
-            <div class="card">
-                <img src="images/pdf_images/page_3_img_1.jpeg" alt="Supercritical CO2" loading="lazy">
+            <div class="card reveal">
+                <div class="card-img-wrapper">
+                    <img src="images/pdf_images/page_3_img_1.jpeg" alt="Supercritical CO2" loading="lazy">
+                </div>
                 <h3><span>01.</span> sCO2 Extraction</h3>
                 <p>Innovative, high-pressure extraction under total oxygen absence. Sterile, solvent-free, and preservation-free premium extracts.</p>
             </div>
-            <div class="card">
-                <img src="images/pdf_images/page_5_img_2.jpeg" alt="Freeze Drying" loading="lazy">
+            <div class="card reveal">
+                <div class="card-img-wrapper">
+                    <img src="images/pdf_images/page_5_img_2.jpeg" alt="Freeze Drying" loading="lazy">
+                </div>
                 <h3><span>02.</span> Lyophilization</h3>
                 <p>Dehydration technique operating close to vacuum, enabling sublimation of water to protect temperature-sensitive biomolecules.</p>
             </div>
-            <div class="card">
-                <img src="images/pdf_images/page_7_img_1.jpeg" alt="Quality Analytics" loading="lazy">
+            <div class="card reveal">
+                <div class="card-img-wrapper">
+                    <img src="images/pdf_images/page_7_img_1.jpeg" alt="Quality Analytics" loading="lazy">
+                </div>
                 <h3><span>03.</span> Quality Control</h3>
                 <p>Equipped with HPLC, GC, and UV/VIS spectroscopy for precise active compound detection, reproducibility, and compliance.</p>
             </div>
@@ -163,6 +171,6 @@
         localStorage.setItem('theme', newTheme);
       });
     }
-</script>
+  </script>
 </body>
 </html>
